@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AdmissionForm from "./AdmissionForm";
 
-function App() {
+const App = () => {
+  const roomId = "A"; // Example value for roomId
+  const deskNumber = "101"; // Example value for deskNumber
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="text-center text-2xl font-bold my-4">Admission Form</h1>
+      <AdmissionForm roomId={roomId} deskNumber={deskNumber} />
     </div>
   );
-}
+};
 
 export default App;
